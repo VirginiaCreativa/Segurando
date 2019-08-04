@@ -1,0 +1,55 @@
+@import './variables';
+
+body {
+	font-family: 'Arial', sans-serif !important;
+}
+
+p,
+li,
+abbr {
+	color: $black;
+	font-weight: 300;
+}
+
+a {
+	&:hover {
+		text-decoration: none !important;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 700;
+}
+
+*:focus {
+	box-shadow: none !important;
+	outline: none !important;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+input,
+label,
+li span {
+	&::selection {
+		color: #fff !important;
+		background-color: $green !important;
+
+		@media (max-width: 575.98px) {
+			color: $black;
+			background-color: #fff;
+		}
+	}
+}
+
