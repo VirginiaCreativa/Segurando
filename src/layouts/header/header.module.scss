@@ -1,7 +1,21 @@
 @import '../../styles/variables';
 
+header {
+  padding: 20px 0;
+}
 :global {
   .navbar {
     padding: 0;
+  }
+  .navbar-toggler {
+    border: none;
+    padding: 0;
+  }
+  .navbar-nav {
+    li {
+      a {
+        text-transform: uppercase;
+      }
+    }
   }
 }
