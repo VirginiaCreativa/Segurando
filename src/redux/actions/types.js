@@ -1,0 +1,1 @@
+export const GET_SELECT_LOGO = 'GET_SELECT_LOGO';
