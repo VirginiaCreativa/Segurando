@@ -1,3 +1,31 @@
+@import '../../styles/variables';
+
 .Top {
-  height: 60px;
+  display: grid;
+  align-content: center;
+  height: 40px;
+  :global {
+    .col-md-6 {
+      p, a, span {
+        color: $black;
+        margin-bottom: 0;
+      }
+      ul, li {
+        margin-bottom: 0; 
+      }
+    
+      a, ul {
+        margin: 0 20px;
+        @media (max-width: 576px) {
+          margin: 0px;
+        }
+      }
+      box-icon {
+        position: relative;
+        top: 2px;
+        height: 16px;
+        fill:$gray_light;
+      }
+    }
+  }
 }
