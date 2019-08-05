@@ -12,14 +12,17 @@ header {
     border: none;
   }
   .navbar-nav {
+
     @media (max-width: 800px) {
       background-color: #fff;
+      border-radius: 4px !important;
       li {
         text-align: center;
         padding: 10px 0;
         border-bottom: 1px solid $write_gray_1 !important;
         a {
           padding: 10px 0;
+          color: $black !important;
         }
         &:last-child {
           border-bottom: none !important;
@@ -31,7 +34,7 @@ header {
         color: $black;
         margin: 0 10px;
         text-transform: uppercase;
-        &.selected {
+        &.active {
           font-weight: 600;
         }
       }
