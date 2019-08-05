@@ -61,7 +61,7 @@ li span {
 	grid-template-columns: repeat(3, auto);
 	grid-gap: 20px;
 	justify-content: start;
-	@media (max-width: 576px) {
+	@media (max-width: 800px) {
 		justify-content: center !important;
 	}
 }
