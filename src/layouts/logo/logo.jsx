@@ -2,8 +2,18 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 
+import BlackLogo from '../../assets/logo/19_01_UX_SG_Logo_Black_V1.svg';
+import WhiteLogo from '../../assets/logo/19_01_UX_SG_Logo_White_V1.svg';
+import classes from './logo.module.scss';
+
 const logo = ({ selectLogo }) => (
-  <div>{selectLogo === 1 ? <h4>Logo Black</h4> : <h4>Logo White</h4>}</div>
+  <>
+    {selectLogo === 1 ? (
+      <img src={BlackLogo} alt="Logo Segurando" className={classes.Logo} />
+    ) : (
+      <img src={WhiteLogo} alt="Logo Segurando" className="img-fluid" />
+    )}
+  </>
 );
 
 export default compose(

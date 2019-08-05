@@ -1,1 +1,7 @@
 @import '../../styles/variables';
+
+:global {
+  .navbar {
+    padding: 0;
+  }
+}
