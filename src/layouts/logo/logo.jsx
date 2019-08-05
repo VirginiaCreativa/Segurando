@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import { compose } from 'redux';
 
-const logo = ({ type }) => (
-  <div>{type === '2' ? <h4>Logo White</h4> : <h4>Logo Black</h4>}</div>
+const logo = ({ selectLogo }) => (
+  <div>{selectLogo === 1 ? <h4>Logo Black</h4> : <h4>Logo White</h4>}</div>
 );
 
-export default logo;
+export default compose(
+  connect(state => ({
+    selectLogo: state.Global.selectLogo,
+  }))
+)(logo);
