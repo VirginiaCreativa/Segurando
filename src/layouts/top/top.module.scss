@@ -12,12 +12,25 @@
       }
       ul, li {
         margin-bottom: 0; 
+        margin-right: 0.3rem;
       }
     
       a, ul {
         margin: 0 20px;
         @media (max-width: 576px) {
-          margin: 0px;
+          font-size: 0.76rem !important;
+          margin: 0px !important;
+          box-icon[name="help-circle"] {
+            top: 0px;
+          }
+          
+        }
+      }
+      span {
+        @media (max-width: 576px) {
+          font-size: 0.74rem;
+          position: relative;
+          top: 2px;
         }
       }
       box-icon {

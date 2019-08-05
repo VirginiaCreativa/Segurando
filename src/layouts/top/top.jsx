@@ -16,7 +16,7 @@ const top = () => (
           <div className="colGrid_2 d-flex justify-content-end">
             <a href="/help">
               <box-icon name="help-circle" />
-              Tienes duda
+              Tiene alguna pregunta
             </a>
             <span>|</span>
             <ul className="list-unstyled list-inline">

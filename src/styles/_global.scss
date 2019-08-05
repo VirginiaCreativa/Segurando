@@ -64,6 +64,9 @@ li span {
 	@media (max-width: 800px) {
 		justify-content: center !important;
 	}
+	@media (max-width: 576px) {
+		grid-gap: 10px;
+	}
 }
 
 box-icon {
