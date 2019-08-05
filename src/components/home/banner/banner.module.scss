@@ -1,4 +1,5 @@
 @import '../../../styles/variables';
+@import '../../../styles/fontResponsive';
 
 .Banner {
   position: absolute;
@@ -12,7 +13,7 @@
   }
   .bgOverly {
     display: block;	
-    background-color: rgba($black, 0.75);
+    background-color: rgba($black, 0.46);
     width: 100%;
     height: 660px;
     background-size: cover;
@@ -22,24 +23,32 @@
     background-position-x: 40%;
     @media screen and (max-width: 576px) {
       top: 40px;
-      height: 360px;
+      height: 450px;
     }
   }
   :global {
     .container {
       display: grid;
       align-content: center;
-      height: 100%;
+      height: 90%;
     }
   }
   .Content {
     width: 46%;
+    @media screen and (max-width: 800px) {
+      width: 100%;
+      text-align: center;
+    }
     .LineGreen {
       display: block;
-      height: 4px;
+      height: 2px;
       width: 30%;
       background-color: $green;
       margin-bottom: 20px;
+      @media screen and (max-width: 800px) {
+        margin: 0 auto  20px auto;
+        width: 40%;
+      }
     }
     h1, h2, p {
       color: #fff;
@@ -47,10 +56,17 @@
     .Heading {
       h1 {
         font-weight: 700;
+        @media screen and (max-width: 800px) {
+          @include responsive-font-size(28px);
+          
+        }
       }
       h2 {
         margin-bottom: 0;
         font-weight: 400;
+        @media screen and (max-width: 800px) {
+          @include responsive-font-size(26px);
+        }
       }
     }
     .Parrag {

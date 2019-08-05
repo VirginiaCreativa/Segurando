@@ -9,7 +9,9 @@ const banner = () => (
           <div className={classes.LineGreen} />
           <div className={classes.Heading}>
             <h2>OFRECE CURSOS PARA</h2>
-            <h1>VENDEDORES ESTRELLAS, SE CAPACITAN Y MEJORES VENDENDORES</h1>
+            <h1>
+              VENDEDORES ESTRELLAS, <br /> SE CAPACITAN Y MEJORES VENDENDORES
+            </h1>
           </div>
           <div className={classes.Parrag}>
             <p>
