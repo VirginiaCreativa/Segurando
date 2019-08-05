@@ -25,13 +25,38 @@
       height: 360px;
     }
   }
+  :global {
+    .container {
+      display: grid;
+      align-content: center;
+      height: 100%;
+    }
+  }
   .Content {
-    position: relative;
-    height: 100%;
-    display: grid;
-    align-content: center;
-    h3 {
+    width: 46%;
+    .LineGreen {
+      display: block;
+      height: 4px;
+      width: 30%;
+      background-color: $green;
+      margin-bottom: 20px;
+    }
+    h1, h2, p {
       color: #fff;
+    }
+    .Heading {
+      h1 {
+        font-weight: 700;
+      }
+      h2 {
+        margin-bottom: 0;
+        font-weight: 400;
+      }
+    }
+    .Parrag {
+      p {
+        font-size: 1.25rem;
+      }
     }
   }
 }
