@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import classes from './header.module.scss';
+import '../../../node_modules/jquery/dist/jquery.min.js';
+import '../../../node_modules/bootstrap/dist/js/bootstrap.min.js';
 
 import Logo from '../logo/logo';
 

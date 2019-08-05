@@ -56,7 +56,7 @@ li span {
 	}
 }
 
-.colGrid_2 {
+.colGrid_3 {
 	display: grid;
 	grid-template-columns: repeat(3, auto);
 	grid-gap: 20px;
@@ -65,15 +65,17 @@ li span {
 		justify-content: center !important;
 	}
 	@media (max-width: 576px) {
-		grid-gap: 10px;
+		grid-gap: 10px !important;
 	}
 }
 
-box-icon {
-	float: left;
-	vertical-align: middle;
-	&:hover {
-		fill: $green !important;
+:global {
+	.bx {
+		float: left;
+		vertical-align: middle;
 		cursor: pointer !important;
+		&:hover {
+			color: $green !important;
+		}
 	}
 }

@@ -5,7 +5,6 @@ import { ConnectedRouter } from 'connected-react-router';
 import createReduxStore, { history } from './redux/store/store';
 import * as serviceWorker from './serviceWorker';
 import './styles/utilis.scss';
-import 'boxicons';
 
 import App from './App';
 

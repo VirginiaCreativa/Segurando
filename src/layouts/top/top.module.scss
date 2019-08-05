@@ -5,48 +5,39 @@
   align-content: center;
   height: 40px;
   border-bottom: 1px solid $write_gray_1;
+  @media (max-width: 576px) {
+    height: 60px;
+  }
   :global {
-    .col-lg-6, .col-md-6 {
-      p, a, span {
-        color: $black;
-        margin-bottom: 0;
-        @media (max-width: 576px) {
-          position: relative;
-          top: 2px;
-        }
-      }
-      ul, li {
-        margin: 0 !important;
-        li {
-          margin: 0 0 0 0.3rem !important;
-        }
-       }
-       
-    
-      a, ul {
-        margin: 0 20px;
-        @media (max-width: 576px) {
-          font-size: 0.76rem !important;
-          margin: 0px !important;
-          box-icon[name="help-circle"] {
-            top: 1px;
-          }
-          
-        }
-      }
-      span {
-        @media (max-width: 576px) {
-          font-size: 0.74rem;
-          position: relative;
-          top: 2px;
-        }
-      }
-      box-icon {
-        position: relative;
-        top: 2px;
-        height: 16px;
-        fill:$gray_light;
+    .bx-help-circle {
+      margin-right: 6px;
+    }
+    .bx {
+      color:$gray_light;
+      position: relative;
+      top: 2px;
+      font-size: 16px;
+      cursor: pointer;
+      &:hover {
+        color: $green;
       }
     }
   }
+  p, a, span {
+    color: $black;
+    margin-bottom: 0;
+  }
+  ul {
+    margin: 0 !important;
+    li {
+      margin-left: 0.3rem;
+      &:first-child {
+        margin-left: 0;
+      }
+      a {
+        margin: 0;
+        padding: 0;
+      }
+    }
+   }
 }

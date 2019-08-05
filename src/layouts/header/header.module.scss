@@ -17,5 +17,11 @@ header {
         text-transform: uppercase;
       }
     }
+    @media (max-width: 576px) {
+      background-color: $blue;
+      li {
+        text-align: center;
+      }
+    }
   }
 }
