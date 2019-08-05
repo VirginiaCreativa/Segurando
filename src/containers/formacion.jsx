@@ -5,15 +5,15 @@ import Banner from '../components/home/banner/banner';
 
 import { getSelectLogo } from '../redux/actions/GlobalAction';
 
-class Home extends Component {
+class Formacion extends Component {
   componentDidMount() {
-    this.props.getSelectLogo(2);
+    this.props.getSelectLogo(1);
   }
 
   render() {
     return (
       <>
-        <Banner />
+        <h2>Formacion</h2>
       </>
     );
   }
@@ -27,4 +27,4 @@ export default compose(
     null,
     mapDispatchToProps
   )
-)(Home);
+)(Formacion);

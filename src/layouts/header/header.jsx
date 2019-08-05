@@ -38,7 +38,7 @@ const header = () => (
               <li className="nav-item">
                 <NavLink
                   to="/formacion"
-                  data-menusetting="0"
+                  data-menusetting="1"
                   activeClassName="selected">
                   Formación
                 </NavLink>
@@ -46,7 +46,7 @@ const header = () => (
               <li className="nav-item">
                 <NavLink
                   to="/formacion"
-                  data-menusetting="0"
+                  data-menusetting="2"
                   activeClassName="selected">
                   Blog
                 </NavLink>
@@ -54,7 +54,7 @@ const header = () => (
               <li className="nav-item">
                 <NavLink
                   to="/formacion"
-                  data-menusetting="0"
+                  data-menusetting="3"
                   activeClassName="selected">
                   Contacto
                 </NavLink>
