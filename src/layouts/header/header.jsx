@@ -1,10 +1,7 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import classes from './header.module.scss';
-import '../../../node_modules/jquery/dist/jquery.min.js';
-import '../../../node_modules/bootstrap/dist/js/bootstrap.min.js';
-
+import { NavLink } from 'react-router-dom';
 import Logo from '../logo/logo';
+import classes from './header.module.scss';
 
 const header = () => (
   <>
@@ -24,30 +21,43 @@ const header = () => (
             aria-label="Toggle navigation">
             <span className="navbar-toggler-icon" />
           </button>
-
           <div
             className="collapse navbar-collapse flex-grow-0"
             id="navbarSupportedContent">
             <ul className="navbar-nav text-right">
               <li className="nav-item active">
-                <a className="nav-link" href="/">
-                  Home <span className="sr-only">(current)</span>
-                </a>
+                <NavLink
+                  to="/"
+                  exact
+                  data-menusetting="0"
+                  activeClassName="selected"
+                  className="linkActive">
+                  Home
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink
+                  to="/formacion"
+                  data-menusetting="0"
+                  activeClassName="selected">
                   Formación
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink
+                  to="/formacion"
+                  data-menusetting="0"
+                  activeClassName="selected">
                   Blog
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Contáctanos
-                </a>
+                <NavLink
+                  to="/formacion"
+                  data-menusetting="0"
+                  activeClassName="selected">
+                  Contacto
+                </NavLink>
               </li>
             </ul>
           </div>

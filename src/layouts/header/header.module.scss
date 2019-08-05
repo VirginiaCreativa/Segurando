@@ -8,19 +8,32 @@ header {
     padding: 0;
   }
   .navbar-toggler {
-    border: none;
     padding: 0;
+    border: none;
   }
   .navbar-nav {
-    li {
-      a {
-        text-transform: uppercase;
-      }
-    }
-    @media (max-width: 576px) {
-      background-color: $blue;
+    @media (max-width: 800px) {
+      background-color: #fff;
       li {
         text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid $write_gray_1 !important;
+        a {
+          padding: 10px 0;
+        }
+        &:last-child {
+          border-bottom: none !important;
+        }
+      }
+    }
+    li {
+      a {
+        color: $black;
+        margin: 0 10px;
+        text-transform: uppercase;
+        &.selected {
+          font-weight: 600;
+        }
       }
     }
   }

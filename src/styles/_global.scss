@@ -69,13 +69,3 @@ li span {
 	}
 }
 
-:global {
-	.bx {
-		float: left;
-		vertical-align: middle;
-		cursor: pointer !important;
-		&:hover {
-			color: $green !important;
-		}
-	}
-}
