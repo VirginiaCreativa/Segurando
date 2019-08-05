@@ -30,11 +30,11 @@
     .container {
       display: grid;
       align-content: center;
-      height: 90%;
+      height: 95%;
     }
   }
   .Content {
-    width: 46%;
+    width: 60%;
     @media screen and (max-width: 800px) {
       width: 100%;
       text-align: center;
@@ -52,13 +52,14 @@
     }
     h1, h2, p {
       color: #fff;
+      margin-bottom: 0;
+      font-family: 'Noto Sans JP';
     }
     .Heading {
       h1 {
         font-weight: 700;
         @media screen and (max-width: 800px) {
-          @include responsive-font-size(28px);
-          
+          @include responsive-font-size(30px);
         }
       }
       h2 {
@@ -70,9 +71,18 @@
       }
     }
     .Parrag {
+      margin-top: 20px;
       p {
         font-size: 1.25rem;
+        font-weight: 300;
+        @media screen and (max-width: 800px) {
+          @include responsive-font-size(18px);
+        }
       }
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 40px;
     }
   }
 }
