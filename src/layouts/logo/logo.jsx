@@ -11,7 +11,7 @@ const logo = ({ selectLogo }) => (
     {selectLogo === 1 ? (
       <img src={BlackLogo} alt="Logo Segurando" className={classes.Logo} />
     ) : (
-      <img src={WhiteLogo} alt="Logo Segurando" className="img-fluid" />
+      <img src={WhiteLogo} alt="Logo Segurando" className={classes.Logo} />
     )}
   </>
 );
