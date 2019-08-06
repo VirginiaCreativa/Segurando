@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators, compose } from 'redux';
 import classes from './formacion.module.scss';
+
+import { fetchFormacion } from '../../../redux/actions/FormacionAction';
 
 import Wrapper from '../../UI/wrapper/wrapper';
 import Filter from './formacion_btnFilters';
@@ -16,7 +20,9 @@ class Formacion extends Component {
     canActiveVivienda: false,
   };
 
-  componentDidUpdate(prevProps, prevState) {}
+  componentDidMount = () => {
+    this.props.fetchFormacion();
+  };
 
   handleAll = () => {
     console.log('Todas');
@@ -173,4 +179,16 @@ class Formacion extends Component {
   }
 }
 
-export default Formacion;
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ fetchFormacion }, dispatch);
+
+export default compose(
+  connect(
+    state => ({
+      formacion: state.Reactid.formaciones,
+      loading: state.Reactid.loading,
+      error: state.Reactid.error,
+    }),
+    mapDispatchToProps
+  )
+)(Formacion);

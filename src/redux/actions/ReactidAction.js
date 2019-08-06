@@ -18,19 +18,6 @@ export const fetchReactidFailure = error => ({
   payload: { error },
 });
 
-function handleErrors(response) {
-  if (!response.ok) {
-    throw Error(response.statusText);
-  }
-  return response;
-}
-
-function getProducts() {
-  return fetch('/')
-    .then(handleErrors)
-    .then(res => res.json());
-}
-
 function fakeGetReactid() {
   return new Promise(resolve => {
     setTimeout(

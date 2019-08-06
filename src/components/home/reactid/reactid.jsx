@@ -1,7 +1,6 @@
 import React, { Component, Suspense, lazy } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators, compose } from 'redux';
-import ScrollMenu from 'react-horizontal-scrolling-menu';
 import classes from './reactid.module.scss';
 
 import { fetchReactid } from '../../../redux/actions/ReactidAction';

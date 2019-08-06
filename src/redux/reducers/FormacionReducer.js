@@ -1,37 +1,37 @@
 import {
-  FETCH_REACTID_BEGIN,
-  FETCH_REACTID_SUCCESS,
-  FETCH_REACTID_FAILURE,
+  FETCH_FORMACION_BEGIN,
+  FETCH_FORMACION_SUCCESS,
+  FETCH_FORMACION_FAILURE,
 } from '../actions/types';
 
 const initialState = {
-  items: [],
+  formaciones: [],
   loading: false,
   error: null,
 };
 
-function ReactidReducer(state = initialState, action) {
+function FormacionReducer(state = initialState, action) {
   switch (action.type) {
-    case FETCH_REACTID_BEGIN:
+    case FETCH_FORMACION_BEGIN:
       return {
         ...state,
         loading: true,
         error: null,
       };
 
-    case FETCH_REACTID_SUCCESS:
+    case FETCH_FORMACION_SUCCESS:
       return {
         ...state,
         loading: false,
-        items: action.payload.reactid,
+        formaciones: action.payload.formacion,
       };
 
-    case FETCH_REACTID_FAILURE:
+    case FETCH_FORMACION_FAILURE:
       return {
         ...state,
         loading: false,
         error: action.payload.error,
-        items: [],
+        formaciones: [],
       };
 
     default:
@@ -39,4 +39,4 @@ function ReactidReducer(state = initialState, action) {
   }
 }
 
-export default ReactidReducer;
+export default FormacionReducer;
