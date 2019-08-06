@@ -1,17 +1,19 @@
 @import '../../../styles/variables';
 
 .Arrows {
+
   %rombo {
+    width: 40px;
     height: 40px;
+    cursor: pointer;
     background-image: url('../../../assets/icons/arrow.svg');
     background-repeat: no-repeat;
-    width: 40px;
   }
   .ArrowL {
     @extend %rombo;
   }
   .ArrowR {
+    transform: rotate(-180deg);
     @extend %rombo;
-    transform: rotate(-180deg)
   }
 }

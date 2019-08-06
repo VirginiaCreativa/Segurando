@@ -1,15 +1,13 @@
 import React, { Component, Suspense, lazy } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators, compose } from 'redux';
-import { cloneDeep } from 'lodash';
+import ScrollMenu from 'react-horizontal-scrolling-menu';
 import classes from './reactid.module.scss';
-import Spinner from '../../UI/spinner/spinner';
-
-import Arrows from '../../UI/arrows/arrows';
 
 import { fetchReactid } from '../../../redux/actions/ReactidAction';
 
-// import BoxReactid from './boxreactid';
+import Arrows from '../../UI/arrows/arrows';
+import Spinner from '../../UI/spinner/spinner';
 
 const BoxReactid = lazy(() => import('./boxreactid'));
 
@@ -24,7 +22,8 @@ class Reactid extends Component {
     return (
       <div className={classes.Reactid}>
         <div className="container">
-          <div className="d-none d-md-block">
+          {/* LAPTOP */}
+          <div className="d-none d-sm-none d-md-none d-lg-block ">
             {loading ? (
               <div className="d-flex justify-content-center">
                 <Spinner />
@@ -37,15 +36,22 @@ class Reactid extends Component {
               </div>
             )}
           </div>
-          <div className="d-sm-block d-md-none">
-            <Arrows select="r" />
-            <Arrows select="l" />
-            <div className={classes.Box_md}>
-              <BoxReactid title="Cursos" number="200" />
-              <BoxReactid title="Diplomados" number="120" />
-              <BoxReactid title="Seminarios y conferencias" number="60" />
-              <BoxReactid title="Vendedores" number="520" />
-              <BoxReactid title="Ganadores" number="340" />
+          {/* MOBIL */}
+          <div className="d-sm-block d-md-block d-lg-none">
+            <div className={classes.Scrolling_md}>
+              <Arrows select="l" />
+              {loading ? (
+                <div className="d-flex justify-content-center">
+                  <Spinner />
+                </div>
+              ) : (
+                <div className={classes.Box_md}>
+                  {reactid.map(item => (
+                    <BoxReactid key={item.id} {...item} />
+                  ))}
+                </div>
+              )}
+              <Arrows select="r" />
             </div>
           </div>
         </div>
