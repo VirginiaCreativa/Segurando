@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators, compose } from 'redux';
 import Banner from '../components/home/banner/banner';
+import Reactid from '../components/home/reactid/reactid';
 
 import { getSelectLogo } from '../redux/actions/GlobalAction';
 
@@ -14,6 +15,7 @@ class Home extends Component {
     return (
       <>
         <Banner />
+        <Reactid />
       </>
     );
   }

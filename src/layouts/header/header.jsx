@@ -90,7 +90,7 @@ const Header = ({ selectsColor, match }) => {
 export default compose(
   withRouter,
   connect(state => ({
-    selectsColor: state.Global.selectLogo,
+    selectsColor: state.Global.selectsColor,
     router: state.router,
   }))
 )(Header);

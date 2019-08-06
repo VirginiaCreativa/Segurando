@@ -1,0 +1,17 @@
+@import '../../../styles/variables';
+@import '../../../styles/fontResponsive';
+
+.Reactid {
+  position: relative;
+  top: 300px;
+  display: grid;
+  justify-content: center;
+  .BoxReActid {
+    height: 220px;
+    width: 200px;
+    display: block;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 20px;
+  }
+}

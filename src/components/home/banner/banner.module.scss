@@ -36,24 +36,24 @@
   .Content {
     width: 60%;
     @media screen and (max-width: 800px) {
-      width: 100%;
       text-align: center;
+      width: 100%;
     }
     .LineGreen {
       display: block;
-      height: 2px;
-      width: 30%;
       background-color: $green;
       margin-bottom: 20px;
+      width: 30%;
+      height: 2px;
       @media screen and (max-width: 800px) {
         margin: 0 auto  20px auto;
         width: 40%;
       }
     }
     h1, h2, p {
+      font-family: 'Noto Sans JP';
       color: #fff;
       margin-bottom: 0;
-      font-family: 'Noto Sans JP';
     }
     .Heading {
       h1 {
