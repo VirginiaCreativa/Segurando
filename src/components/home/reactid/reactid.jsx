@@ -1,13 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component, Suspense, lazy } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators, compose } from 'redux';
 import { cloneDeep } from 'lodash';
 import classes from './reactid.module.scss';
+import Spinner from '../../UI/spinner/spinner';
 
-import BoxReactid from './boxreactid';
 import Arrows from '../../UI/arrows/arrows';
 
 import { fetchReactid } from '../../../redux/actions/ReactidAction';
+
+// import BoxReactid from './boxreactid';
+
+const BoxReactid = lazy(() => import('./boxreactid'));
 
 class Reactid extends Component {
   componentDidMount() {
@@ -16,25 +20,22 @@ class Reactid extends Component {
 
   render() {
     const { error, loading, reactid } = this.props;
-    if (error) {
-      return <div>Error! {error.message}</div>;
-    }
-
-    if (loading) {
-      return <div>Loading...</div>;
-    }
 
     return (
       <div className={classes.Reactid}>
         <div className="container">
           <div className="d-none d-md-block">
-            <div className={classes.Box_sm}>
-              {loading ? (
-                <div>Loading...</div>
-              ) : (
-                reactid.map(item => <BoxReactid key={item.id} {...item} />)
-              )}
-            </div>
+            {loading ? (
+              <div className="d-flex justify-content-center">
+                <Spinner />
+              </div>
+            ) : (
+              <div className={classes.Box_sm}>
+                {reactid.map(item => (
+                  <BoxReactid key={item.id} {...item} />
+                ))}
+              </div>
+            )}
           </div>
           <div className="d-sm-block d-md-none">
             <Arrows select="r" />

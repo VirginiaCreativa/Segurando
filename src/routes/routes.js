@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { Component, Suspense, lazy } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import Spinner from '../components/UI/spinner/spinner';
 
-import Home from '../containers/home';
-import Formacion from '../containers/formacion';
+const Home = lazy(() => import('../containers/home'));
+const Formacion = lazy(() => import('../containers/formacion'));
 
 const Routers = () => (
   <>
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route path="/formacion" component={Formacion} />
-    </Switch>
+    <Suspense fallback={<Spinner />}>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/formacion" component={Formacion} />
+      </Switch>
+    </Suspense>
   </>
 );
 
