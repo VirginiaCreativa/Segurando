@@ -3,15 +3,59 @@
 
 .Reactid {
   position: relative;
-  top: 300px;
-  display: grid;
-  justify-content: center;
+  top: 500px;
+  @media screen and (max-width: 576px) {
+    top: 300px;
+  }
+  .Box_sm {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 20px;
+    justify-content: space-between;
+  }
+  .Box_md {
+    display: grid;
+    justify-content: center;
+  }
   .BoxReActid {
-    height: 220px;
-    width: 200px;
-    display: block;
+    display: grid;
+    justify-content: end;
+    justify-items: end;
+    align-content: center;
     background-color: #fff;
-    border-radius: 4px;
+    -webkit-box-shadow: 0px 7px 20px 0px rgba(36,57,88,0.2);
+    -moz-box-shadow: 0px 7px 20px 0px rgba(36,57,88,0.2);
+    box-shadow: 0px 7px 20px 0px rgba(36,57,88,0.2);
     padding: 20px;
+    width: 180px;
+    height: 160px;
+    border-radius: 4px;
+   
+    .LineGreen {
+      display: block;
+      background-color: $green;
+      margin: 6px 0 8px;
+      width: 40%;
+      height: 4px;
+      text-align: right;
+      float: right;
+      align-content: center;
+      align-items: center;
+    }
+    h1, h6 {
+      margin-bottom: 0;
+      text-align: right;
+    }
+    h1 {
+      font-size: 50px;
+      font-weight: 700;
+      span {
+        margin-right: 16px;
+      }
+    }
+    h6 {
+      color: $gray_medium;
+    }
   }
 }

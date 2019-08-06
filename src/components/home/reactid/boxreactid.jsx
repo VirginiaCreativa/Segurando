@@ -3,8 +3,12 @@ import classes from './reactid.module.scss';
 
 const BoxReactid = ({ number, title }) => (
   <div className={classes.BoxReActid}>
-    <h3>number</h3>
-    <h6>title</h6>
+    <h1>
+      <span>+</span>
+      {number}
+    </h1>
+    <div className={classes.LineGreen} />
+    <h6>{title}</h6>
   </div>
 );
 
