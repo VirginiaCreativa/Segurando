@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import classes from './reactid.module.scss';
 
 import BoxReactid from './boxreactid';
+import Arrows from '../../UI/arrows/arrows';
 
 const Reactid = () => {
   const [isCounter, setCounter] = useState(null);
@@ -19,6 +20,8 @@ const Reactid = () => {
           </div>
         </div>
         <div className="d-sm-block d-md-none">
+          <Arrows select="r" />
+          <Arrows select="l" />
           <div className={classes.Box_md}>
             <BoxReactid title="Cursos" number="200" />
             <BoxReactid title="Diplomados" number="120" />
