@@ -6,7 +6,7 @@ import classes from './formacion.module.scss';
 import { fetchFormacion } from '../../../redux/actions/FormacionAction';
 
 import Wrapper from '../../UI/wrapper/wrapper';
-import Filter from './formacion_btnFilters';
+import Filter from './formacionFilters';
 
 class Formacion extends Component {
   state = {

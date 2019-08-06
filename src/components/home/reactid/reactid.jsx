@@ -8,7 +8,7 @@ import { fetchReactid } from '../../../redux/actions/ReactidAction';
 import Arrows from '../../UI/arrows/arrows';
 import Spinner from '../../UI/spinner/spinner';
 
-const BoxReactid = lazy(() => import('./boxreactid'));
+const ItemReactid = lazy(() => import('./reactidItem'));
 
 class Reactid extends Component {
   componentDidMount() {
@@ -30,7 +30,7 @@ class Reactid extends Component {
             ) : (
               <div className={classes.Box_sm}>
                 {reactid.map(item => (
-                  <BoxReactid key={item.id} {...item} />
+                  <ItemReactid key={item.id} {...item} />
                 ))}
               </div>
             )}
@@ -46,7 +46,7 @@ class Reactid extends Component {
               ) : (
                 <div className={classes.Box_md}>
                   {reactid.map(item => (
-                    <BoxReactid key={item.id} {...item} />
+                    <ItemReactid key={item.id} {...item} />
                   ))}
                 </div>
               )}
