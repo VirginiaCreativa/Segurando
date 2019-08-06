@@ -1,7 +1,7 @@
 import { GET_SELECT_LOGO } from '../actions/types';
 
 const initialState = {
-  selectLogo: 1,
+  selectsColor: 1,
 };
 
 const GlobalReducer = (state = initialState, action) => {
@@ -9,7 +9,7 @@ const GlobalReducer = (state = initialState, action) => {
     case GET_SELECT_LOGO: {
       return {
         ...state,
-        selectLogo: action.payload,
+        selectsColor: action.payload,
       };
     }
 

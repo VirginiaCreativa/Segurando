@@ -6,9 +6,9 @@ import BlackLogo from '../../assets/logo/19_01_UX_SG_Logo_Black_V1.svg';
 import WhiteLogo from '../../assets/logo/19_01_UX_SG_Logo_White_V1.svg';
 import classes from './logo.module.scss';
 
-const logo = ({ selectLogo }) => (
+const logo = ({ selectsColor }) => (
   <>
-    {selectLogo === 1 ? (
+    {selectsColor === 1 ? (
       <img src={BlackLogo} alt="Logo Segurando" className={classes.Logo} />
     ) : (
       <img src={WhiteLogo} alt="Logo Segurando" className={classes.Logo} />
@@ -18,6 +18,6 @@ const logo = ({ selectLogo }) => (
 
 export default compose(
   connect(state => ({
-    selectLogo: state.Global.selectLogo,
+    selectsColor: state.Global.selectsColor,
   }))
 )(logo);
