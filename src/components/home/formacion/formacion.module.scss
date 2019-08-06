@@ -1,6 +1,8 @@
 @import '../../../styles/variables';
 @import '../../../styles/fontResponsive';
 
+$gap: 10px;
+
 .Formacion {
   position: relative;
   top: -140px;
@@ -10,14 +12,17 @@
   .BoxFilters {
     display: flex;
     justify-content: center;
-    grid-gap: 10px;
     flex-wrap: wrap;
+    :global {
+      .btn {
+        margin: $gap/2;
+      }
+    }
     @media screen and (max-width: 576px) {
       flex-direction: row;
       :global {
         .btn {
           @include responsive-font-size(14px);
-
         }
       }
     } 
