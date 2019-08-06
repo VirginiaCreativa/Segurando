@@ -1,0 +1,20 @@
+@import '../../../styles/variables';
+@import '../../../styles/fontResponsive';
+
+.Wrapper {
+  padding: 60px 0;
+  display: flex;
+  h2 {
+    color: $principal;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-family: 'Noto Sans JP';
+    font-weight: 600;
+    @media screen and (max-width: 576px) {
+      @include responsive-font-size(40px);
+      letter-spacing: 1px;
+    }
+  }
+}

@@ -3,9 +3,9 @@
 
 .Reactid {
   position: relative;
-  top: 500px;
+  top: -162px;
   @media screen and (max-width: 576px) {
-    top: 270px;
+    top: -390px;
   }
   .Box_sm {
     display: grid;
@@ -28,11 +28,6 @@
     width: 180px;
     height: 160px;
     border-radius: 4px;
-    // @media screen and (max-width: 576px) {
-    //   &:last-child {
-    //     margin-right: 40px;
-    //   }
-    // }
     .LineGreen {
       display: block;
       align-items: center;

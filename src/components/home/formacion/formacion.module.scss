@@ -1,0 +1,7 @@
+.Formacion {
+  position: relative;
+  top: -140px;
+  @media screen and (max-width: 576px) {
+    top: -430px;
+  }
+}
