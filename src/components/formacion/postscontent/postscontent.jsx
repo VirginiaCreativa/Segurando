@@ -17,11 +17,11 @@ class PostsContent extends Component {
             <Spinner />
           </div>
         ) : (
-          <div className={classes.BoxGrid}>
+          <>
             {formaciones.map(item => (
               <PostsContenItem key={item.id} {...item} />
             ))}
-          </div>
+          </>
         )}
       </div>
     );
