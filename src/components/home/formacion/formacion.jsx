@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, lazy } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators, compose } from 'redux';
 import classes from './formacion.module.scss';
@@ -6,7 +6,10 @@ import classes from './formacion.module.scss';
 import { fetchFormacion } from '../../../redux/actions/FormacionAction';
 
 import Wrapper from '../../UI/wrapper/wrapper';
+import Spinner from '../../UI/spinner/spinner';
 import Filter from './formacionFilters';
+
+const ItemFormacion = lazy(() => import('./formacionItem'));
 
 class Formacion extends Component {
   state = {
@@ -103,6 +106,7 @@ class Formacion extends Component {
   };
 
   render() {
+    const { error, loading, formaciones } = this.props;
     const {
       canActiveAll,
       canActiveVida,
@@ -173,6 +177,19 @@ class Formacion extends Component {
               />
             </div>
           </div>
+          <div className="col">
+            {loading ? (
+              <div className="d-flex justify-content-center">
+                <Spinner />
+              </div>
+            ) : (
+              <div className={classes.BoxGrid}>
+                {formaciones.map(item => (
+                  <ItemFormacion key={item.id} {...item} />
+                ))}
+              </div>
+            )}
+          </div>
         </Wrapper>
       </div>
     );
@@ -185,9 +202,9 @@ const mapDispatchToProps = dispatch =>
 export default compose(
   connect(
     state => ({
-      formacion: state.Reactid.formaciones,
-      loading: state.Reactid.loading,
-      error: state.Reactid.error,
+      formaciones: state.Formacion.formaciones,
+      loading: state.Formacion.loading,
+      error: state.Formacion.error,
     }),
     mapDispatchToProps
   )

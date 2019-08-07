@@ -77,11 +77,13 @@ li span {
 }
 .btn-success{
 	background-color: transparent !important;
-	border: 1px solid $write_gray_3;
+	border: 1px solid $write_gray_2;
 	border-radius: 2px;
-	text-transform: uppercase;
-	color: $principal_2;
-	font-size: 0.9rem;
+	color: $black;
+	font-size: 0.875rem;
+	font-weight: 600;
+	letter-spacing: 1px;
+	padding: 10px 20px;
 	&:hover {
 		background-color: $green !important;
 		color: #fff;

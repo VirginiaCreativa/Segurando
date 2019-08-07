@@ -38,7 +38,7 @@ function fakeGetFormacions() {
               id: 1,
               formacion: 'diplomado',
               categoria: 'salud',
-              title: 'Claims Made Iberoamérica',
+              title: 'Administración de Riesgos en Salud',
               image: 'formacion_4.jpg',
               description:
                 'Minim anim et dolor exercitation id sint nisi consequat mollit sint cillum occaecat elit. Ullamco ullamco cillum aliqua reprehenderit ex.',

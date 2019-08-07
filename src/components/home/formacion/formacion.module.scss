@@ -27,4 +27,10 @@ $gap: 10px;
       }
     } 
   }
+  .BoxGrid {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: $gap/2;
+  }
 }
