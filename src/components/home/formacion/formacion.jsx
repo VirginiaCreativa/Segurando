@@ -133,51 +133,50 @@ class Formacion extends Component {
     return (
       <div className={classes.Formacion}>
         <Wrapper title="Formación" bgColor="2">
-          <div className="col">
-            <div className={classes.BoxFilters}>
-              <Filter
-                onClick={this.handleAll}
-                text="Todas"
-                active={classActiveAll}
-              />
-              <Filter
-                onClick={this.handleVida}
-                text="Vida y Social"
-                active={classActiveVida}
-              />
-              <Filter
-                onClick={this.handleSalud}
-                text="Salud"
-                active={classActiveSalud}
-              />
-              <Filter
-                onClick={this.handleVivienda}
-                text="Vivienda"
-                active={classActieVivienda}
-              />
-              <Filter
-                onClick={this.handleARL}
-                text="ARL"
-                active={classActiveARL}
-              />
-              <Filter
-                onClick={this.handleFuturo}
-                text="Futuro"
-                active={classActiveFuturo}
-              />
-              <Filter
-                onClick={this.handleMovilidad}
-                text="Movilidad"
-                active={classActiveMovilidad}
-              />
-              <Filter
-                onClick={this.handleFinancias}
-                text="Financias"
-                active={classActiveFinancias}
-              />
-            </div>
+          <div className={classes.BoxFilters}>
+            <Filter
+              onClick={this.handleAll}
+              text="Todas"
+              active={classActiveAll}
+            />
+            <Filter
+              onClick={this.handleVida}
+              text="Vida y Social"
+              active={classActiveVida}
+            />
+            <Filter
+              onClick={this.handleSalud}
+              text="Salud"
+              active={classActiveSalud}
+            />
+            <Filter
+              onClick={this.handleVivienda}
+              text="Vivienda"
+              active={classActieVivienda}
+            />
+            <Filter
+              onClick={this.handleARL}
+              text="ARL"
+              active={classActiveARL}
+            />
+            <Filter
+              onClick={this.handleFuturo}
+              text="Futuro"
+              active={classActiveFuturo}
+            />
+            <Filter
+              onClick={this.handleMovilidad}
+              text="Movilidad"
+              active={classActiveMovilidad}
+            />
+            <Filter
+              onClick={this.handleFinancias}
+              text="Financias"
+              active={classActiveFinancias}
+            />
           </div>
-          <div className="col">
+
+          <>
             {loading ? (
               <div className="d-flex justify-content-center">
                 <Spinner />
@@ -189,7 +188,7 @@ class Formacion extends Component {
                 ))}
               </div>
             )}
-          </div>
+          </>
         </Wrapper>
       </div>
     );

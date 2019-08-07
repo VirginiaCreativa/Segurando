@@ -11,13 +11,9 @@ $gap: 10px;
   }
   .BoxFilters {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    :global {
-      .btn {
-        margin: $gap/2;
-      }
-    }
+    justify-content: center;
+    margin-bottom: 40px;
     @media screen and (max-width: 576px) {
       flex-direction: row;
       :global {
@@ -25,12 +21,76 @@ $gap: 10px;
           @include responsive-font-size(14px);
         }
       }
+    }
+    :global {
+      .btn {
+        margin: $gap/2;
+      }
     } 
   }
   .BoxGrid {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    margin: $gap/2;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 20px;
+    @media screen and (max-width: 576px) {
+      grid-template-columns: repeat(2, auto);
+      grid-gap: 20px;
+    } 
+    .FormacionItem {
+      transition: all ease 0.2s;
+      cursor: pointer;
+      &:hover {
+        .BoxContent {
+          border-bottom: 2px solid $green;
+        } 
+      }
+      .BoxImage {
+        height: 200px;
+        border-radius: 8px;
+        overflow: hidden;
+        @media screen and (max-width: 576px) {
+          height: 100px;
+        } 
+      } 
+      .BoxContent {
+        transition: all ease 0.2s;
+        border-bottom: 2px solid #fff;
+        justify-content: center;
+        background-color: #fff;
+        position: relative;
+        top: -20px;
+        padding: 20px;
+        width: 90%;
+        z-index: 2;
+        @media screen and (max-width: 576px) {
+          padding: 10px;
+        }
+        h6, h5, p {
+          font-family: 'Noto Sans JP';
+        }
+        h6 {
+          color: $green !important;
+          text-transform: uppercase;
+          font-weight: 400;
+          @media screen and (max-width: 576px) {
+            @include responsive-font-size(12px);
+          } 
+        }
+        h5 {
+          @media screen and (max-width: 576px) {
+            @include responsive-font-size(16px);
+          } 
+        }
+        p {
+          border-top: 1px solid $write_gray_1;
+          padding-top: 8px;
+          font-size: 0.825rem;
+          color: $gray_light !important;
+          @media screen and (max-width: 576px) {
+            @include responsive-font-size(0.725rem);
+          } 
+        }
+      }
+    }
   }
 }

@@ -12,9 +12,11 @@ const FormacionItem = ({ formacion, title, image, date }) => (
         className="img-fluid"
       />
     </div>
-    <h6>{formacion}</h6>
-    <h3>{title}</h3>
-    <p>{date}</p>
+    <div className={classes.BoxContent}>
+      <h6>{formacion}</h6>
+      <h5>{title}</h5>
+      <p>{date}</p>
+    </div>
   </div>
 );
 
