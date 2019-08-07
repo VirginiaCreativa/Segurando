@@ -7,7 +7,7 @@ import WhiteLogo from '../../assets/logo/19_01_UX_SG_Logo_White_V1.svg';
 import { getSelectLogo } from '../../redux/actions/GlobalAction';
 
 const Footer = () => {
-  const year = 2019;
+  const year = new Date().getFullYear();
   const siteTech = <a target="_blank" href="https://techandsolve.com/es/" />;
   return (
     <div className={classes.Footer}>
@@ -97,7 +97,7 @@ const Footer = () => {
       <div className={classes.Bottom}>
         <div className="container">
           <p>
-            Copyright ©{year}{' '}
+            Copyright ©{year} by:{' '}
             <a target="_blank" href="https://techandsolve.com/es/">
               Tech and Solve
             </a>
