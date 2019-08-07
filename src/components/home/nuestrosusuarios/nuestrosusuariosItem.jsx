@@ -14,11 +14,7 @@ const NuestrosUsuariosItem = ({
 }) => (
   <div className={classes.NuestrosUsuariosItem}>
     <div className={classes.BoxImage}>
-      <img
-        src={pathToAssets(`./images/formaciones/${image}`)}
-        alt={`${company}, ${job}, ${name}`}
-        className="img-fluid"
-      />
+      <img src="" alt={`${company}, ${job}, ${name}`} className="img-fluid" />
     </div>
     <div className={classes.BoxContent}>
       <h1>{name}</h1>
@@ -28,7 +24,7 @@ const NuestrosUsuariosItem = ({
       <p className={classes.TextJob}>{job}</p>
     </div>
     <div className={classes.BoxFormacion}>
-      <ul className="list-unstyled">
+      <ul>
         {formaciones.map(item => (
           <li key={item}>
             <Link to="/formacion">{item}</Link>

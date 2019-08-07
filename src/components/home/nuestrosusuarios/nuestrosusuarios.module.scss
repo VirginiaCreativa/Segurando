@@ -1,10 +1,54 @@
 @import '../../../styles/variables';
 @import '../../../styles/fontResponsive';
 
+$gap: 20px;
+
 .NuestrosUsuarios {
   position: relative;
   top: -140px;
   @media screen and (max-width: 576px) {
     top: -430px;
+  }
+  .Subtitle {
+    p {
+      text-align: center;
+    }
+  }
+  .BoxSlice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  .ItemsScrolling {
+    padding: 30px 20px;
+    overflow-x: auto;
+    margin: 0  20px;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none !important;
+    }
+    @media screen and (max-width: 576px) {
+      margin: 0  10px;
+      padding: 30px 20;
+    }
+    @media screen and (max-width: 360px) {
+      padding: 30px 20px;
+    }
+    .BoxGrid {
+      display: grid;
+      grid-template-columns: repeat(6, 280px);
+      grid-gap: 50px;
+      justify-content: space-between;
+      @media screen and (max-width: 576px) {
+        grid-gap: 100px;
+      }
+      @media screen and (max-width: 360px) {
+        grid-template-columns: repeat(6, 240px);
+      }
+    }
+    .NuestrosUsuariosItem {
+      @extend %boxShadowContent;
+    }
   }
 }

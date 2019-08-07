@@ -69,6 +69,7 @@
       min-height: 200px;
       padding: 40px 62px;
       overflow-x: auto;
+      scrollbar-width: none;
       &::-webkit-scrollbar {
         display: none !important;
       }

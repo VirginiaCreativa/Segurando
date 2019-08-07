@@ -11,3 +11,12 @@ $gray_dark: #57606f;
 $write_gray_1: #f1f2f6;
 $write_gray_2: #dfe4ea;
 $write_gray_3: #ced6e0;
+
+%boxShadowContent {
+	background-color: #fff;
+	-webkit-box-shadow: 0px 7px 20px 0px rgba(36, 57, 88, 0.2);
+	-moz-box-shadow: 0px 7px 20px 0px rgba(36,57,88,0.2);
+	box-shadow: 0px 7px 20px 0px rgba(36,57,88,0.2);
+	padding: 20px;
+	border-radius: 4px;
+}
