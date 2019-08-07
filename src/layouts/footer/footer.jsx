@@ -45,7 +45,7 @@ const Footer = () => {
             <div className="col-md-2 col-sm-12">
               <div className={classes.Space}>
                 <h4>Dirección</h4>
-                <a href="#">Carrera 7 # 26-20, Piso 4 Edificio</a>
+                <p>Carrera 7 # 26-20, Piso 4 Edificio</p>
                 <p>Medellín, Colombia</p>
               </div>
               <div className={classes.Space}>
