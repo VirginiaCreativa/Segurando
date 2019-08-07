@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
+/* eslint-disable react/jsx-no-target-blank */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import classes from './footer.module.scss';
@@ -6,7 +8,7 @@ import { getSelectLogo } from '../../redux/actions/GlobalAction';
 
 const Footer = () => {
   const year = 2019;
-
+  const siteTech = <a target="_blank" href="https://techandsolve.com/es/" />;
   return (
     <div className={classes.Footer}>
       <div className={classes.Top}>
@@ -41,10 +43,25 @@ const Footer = () => {
               </ul>
             </div>
             <div className="col">
-              <h4>Telefóno</h4>
+              <div className={classes.Space}>
+                <h4>Dirección</h4>
+                <a href="#">Carrera 7 # 26-20, Piso 4 Edificio</a>
+                <p>Medellín, Colombia</p>
+              </div>
+              <div className={classes.Space}>
+                <h4>Teléfonos</h4>
+                <p>Pbx: (+574) 243 64 20</p>
+                <p>Fax: (+574) 210 70 21</p>
+              </div>
             </div>
             <div className="col">
               <h4>Subcribre</h4>
+              <div className={classes.FormSubcrib}>
+                <input type="text" placeholder="Tu e-mail" />
+                <button type="submit">
+                  <i className="bx bx-right-arrow-alt" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -52,7 +69,12 @@ const Footer = () => {
       <hr />
       <div className={classes.Bottom}>
         <div className="container">
-          <p>©{year} By: Tech and Solve, Medellin</p>
+          <p>
+            Copyright ©{year}{' '}
+            <a target="_blank" href="https://techandsolve.com/es/">
+              Tech and Solve
+            </a>
+          </p>
         </div>
       </div>
     </div>
