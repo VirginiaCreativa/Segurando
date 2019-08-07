@@ -5,6 +5,7 @@ import Banner from '../components/home/banner/banner';
 import Reactid from '../components/home/reactid/reactid';
 import Formacion from '../components/home/formacion/formacion';
 import NuestrosUsuarios from '../components/home/nuestrosusuarios/nuestrosusuarios';
+import Premios from '../components/home/premios/premios';
 
 import { getSelectLogo } from '../redux/actions/GlobalAction';
 
@@ -20,6 +21,7 @@ class Home extends Component {
         <Reactid />
         <Formacion />
         <NuestrosUsuarios />
+        <Premios />
       </>
     );
   }

@@ -1,0 +1,33 @@
+@import '../../../styles/variables';
+@import '../../../styles/fontResponsive';
+
+$gap: 10px;
+
+.Premios {
+  position: relative;
+  top: -140px;
+  @media screen and (max-width: 576px) {
+    top: -430px;
+  }
+  button {
+    padding: 10px 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  p {
+    text-align: center;
+    line-height: 2;
+    color: $gray_medium;
+  }
+  :global {
+    .col-lg-4 {
+      display: grid;
+      align-content: center;
+    }
+    .col-12 {
+      margin-top: 20px;
+    }
+  }
+
+}
