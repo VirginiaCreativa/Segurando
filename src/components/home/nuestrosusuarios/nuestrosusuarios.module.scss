@@ -92,6 +92,11 @@ $gap: 20px;
           @media screen and (max-width: 360px) {
             padding-left: 20px;
           }
+          li {
+            a {
+              color: $green;
+            }
+          }
         }
       }
     }
