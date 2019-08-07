@@ -12,7 +12,7 @@
     font-family: 'Noto Sans JP';
     font-weight: 600;
     @media screen and (max-width: 576px) {
-      @include responsive-font-size(40px);
+      @include responsive-font-size(30px);
       letter-spacing: 1px;
     }
   }

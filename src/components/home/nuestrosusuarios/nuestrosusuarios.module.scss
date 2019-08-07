@@ -1,0 +1,10 @@
+@import '../../../styles/variables';
+@import '../../../styles/fontResponsive';
+
+.NuestrosUsuarios {
+  position: relative;
+  top: -140px;
+  @media screen and (max-width: 576px) {
+    top: -430px;
+  }
+}
