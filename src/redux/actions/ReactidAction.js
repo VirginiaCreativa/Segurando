@@ -57,13 +57,14 @@ function fakeGetReactid() {
 }
 
 export function fetchReactid() {
-  return dispatch => {
+  return async dispatch => {
     dispatch(fetchReactidBegin());
-    return fakeGetReactid()
-      .then(json => {
-        dispatch(fetchReactidSuccess(json.reactid));
-        return json.reactid;
-      })
-      .catch(error => dispatch(fetchReactidFailure(error)));
+    try {
+      const json = await fakeGetReactid();
+      dispatch(fetchReactidSuccess(json.reactid));
+      return json.reactid;
+    } catch (error) {
+      return dispatch(fetchReactidFailure(error));
+    }
   };
 }

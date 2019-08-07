@@ -93,13 +93,14 @@ function fakeGetFormacions() {
 }
 
 export function fetchFormacion() {
-  return dispatch => {
+  return async dispatch => {
     dispatch(fetchFormacionBegin());
-    return fakeGetFormacions()
-      .then(json => {
-        dispatch(fetchFormacionSuccess(json.formacion));
-        return json.formacion;
-      })
-      .catch(error => dispatch(fetchFormacionFailure(error)));
+    try {
+      const json = await fakeGetFormacions();
+      dispatch(fetchFormacionSuccess(json.formacion));
+      return json.formacion;
+    } catch (error) {
+      return dispatch(fetchFormacionFailure(error));
+    }
   };
 }

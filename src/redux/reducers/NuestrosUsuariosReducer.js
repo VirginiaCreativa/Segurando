@@ -5,12 +5,12 @@ import {
 } from '../actions/types';
 
 const initialState = {
-  nuestrosusuarios: [],
+  usuarios: [],
   loading: false,
   error: null,
 };
 
-function NuestrosUsuariosReducer(state = initialState, action) {
+function FormacionReducer(state = initialState, action) {
   switch (action.type) {
     case FETCH_NUESTROSUSUARIOS_BEGIN:
       return {
@@ -23,7 +23,7 @@ function NuestrosUsuariosReducer(state = initialState, action) {
       return {
         ...state,
         loading: false,
-        nuestrosusuarios: action.payload.nusuarios,
+        usuarios: action.payload.usuarios,
       };
 
     case FETCH_NUESTROSUSUARIOS_FAILURE:
@@ -31,7 +31,7 @@ function NuestrosUsuariosReducer(state = initialState, action) {
         ...state,
         loading: false,
         error: action.payload.error,
-        nuestrosusuarios: [],
+        usuarios: [],
       };
 
     default:
@@ -39,4 +39,4 @@ function NuestrosUsuariosReducer(state = initialState, action) {
   }
 }
 
-export default NuestrosUsuariosReducer;
+export default FormacionReducer;

@@ -6,14 +6,15 @@ import classes from './nuestrosusuarios.module.scss';
 import Wrapper from '../../UI/wrapper/wrapper';
 import Arrows from '../../UI/arrows/arrows';
 
-import { fetchFormacion } from '../../../redux/actions/FormacionAction';
+import { fetchNuestrosUsuarios } from '../../../redux/actions/NuestrosUsuariosAction';
 
 class NuestrosUsuarios extends Component {
   componentDidMount = () => {
-    this.props.fetchFormacion();
+    this.props.fetchNuestrosUsuarios();
   };
 
   render() {
+    const { error, loading, nuestrosusuarios } = this.props;
     return (
       <div className={classes.NuestrosUsuarios}>
         <Wrapper title="Nuestros Usuarios" bgColor="1">
@@ -35,14 +36,14 @@ class NuestrosUsuarios extends Component {
 }
 
 const mapDispatchToProps = dispatch =>
-  bindActionCreators({ fetchFormacion }, dispatch);
+  bindActionCreators({ fetchNuestrosUsuarios }, dispatch);
 
 export default compose(
   connect(
     state => ({
-      formaciones: state.Formacion.formaciones,
-      loading: state.Formacion.loading,
-      error: state.Formacion.error,
+      usuarios: state.NuestrosUsuarios.usuarios,
+      loading: state.NuestrosUsuarios.loading,
+      error: state.NuestrosUsuarios.error,
     }),
     mapDispatchToProps
   )

@@ -4,16 +4,16 @@ import {
   FETCH_NUESTROSUSUARIOS_FAILURE,
 } from './types';
 
-export const fetchNuestrosUsuariosBegin = () => ({
+export const fetchNUsuariosBegin = () => ({
   type: FETCH_NUESTROSUSUARIOS_BEGIN,
 });
 
-export const fetchNuestrosUsuariosSuccess = nusuarios => ({
+export const fetchNUsuariosSuccess = usuarios => ({
   type: FETCH_NUESTROSUSUARIOS_SUCCESS,
-  payload: { nusuarios },
+  payload: { usuarios },
 });
 
-export const fetchNuestrosUsuariosFailure = error => ({
+export const fetchNUsuariosFailure = error => ({
   type: FETCH_NUESTROSUSUARIOS_FAILURE,
   payload: { error },
 });
@@ -23,7 +23,7 @@ function fakeGetNuestrosUsuarios() {
     setTimeout(
       () =>
         resolve({
-          nuestrosusuearios: [
+          usuarios: [
             {
               id: 1,
               name: 'Leanne Graham',
@@ -116,13 +116,14 @@ function fakeGetNuestrosUsuarios() {
 }
 
 export function fetchNuestrosUsuarios() {
-  return dispatch => {
-    dispatch(fetchNuestrosUsuariosBegin());
-    return fakeGetNuestrosUsuarios()
-      .then(json => {
-        dispatch(fetchNuestrosUsuariosSuccess(json.nusuarios));
-        return json.nusuarios;
-      })
-      .catch(error => dispatch(fetchNuestrosUsuariosFailure(error)));
+  return async dispatch => {
+    dispatch(fetchNUsuariosBegin());
+    try {
+      const json = await fakeGetNuestrosUsuarios();
+      dispatch(fetchNUsuariosSuccess(json.usuarios));
+      return json.usuarios;
+    } catch (error) {
+      return dispatch(fetchNUsuariosFailure(error));
+    }
   };
 }

@@ -10,7 +10,7 @@ const initialState = {
   error: null,
 };
 
-function FormacionReducer(state = initialState, action) {
+function NuestrosUsuariosReducer(state = initialState, action) {
   switch (action.type) {
     case FETCH_FORMACION_BEGIN:
       return {
@@ -39,4 +39,4 @@ function FormacionReducer(state = initialState, action) {
   }
 }
 
-export default FormacionReducer;
+export default NuestrosUsuariosReducer;
