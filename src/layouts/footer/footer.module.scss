@@ -25,6 +25,9 @@
     }
     ul {
       margin-left: 16px;
+      @media screen and (max-width: 576px) {
+        margin-left: 0;
+      }
       li {
         padding: 6px 0;
         a {
@@ -53,9 +56,9 @@
         border: 1px solid $gray_medium;
         border-top-left-radius: 4px;
         border-bottom-left-radius: 4px;
-        @media screen and (max-width: 576px) {
-          padding: 10px 6px;
-        }
+        // @media screen and (max-width: 576px) {
+        //   padding: 10px 6px;
+        // }
       }
       button {
         background-color: transparent;

@@ -13,8 +13,8 @@ const Footer = () => {
     <div className={classes.Footer}>
       <div className={classes.Top}>
         <div className="container">
-          <div className="row">
-            <div className="col">
+          <div className="row d-flex justify-content-around">
+            <div className="col-md-3 col-sm-12">
               <img
                 src={WhiteLogo}
                 alt="Logo Segurando"
@@ -25,7 +25,7 @@ const Footer = () => {
                 nisi amet anim.
               </p>
             </div>
-            <div className="col">
+            <div className="col-md-2 col-sm-12 ">
               <h4>Categorías</h4>
               <ul className="list-unstyled">
                 <li>
@@ -42,7 +42,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="col">
+            <div className="col-md-2 col-sm-12">
               <div className={classes.Space}>
                 <h4>Dirección</h4>
                 <a href="#">Carrera 7 # 26-20, Piso 4 Edificio</a>
@@ -54,7 +54,7 @@ const Footer = () => {
                 <p>Fax: (+574) 210 70 21</p>
               </div>
             </div>
-            <div className="col">
+            <div className="col-md-3 col-sm-12">
               <h4>Subcribre</h4>
               <div className={classes.FormSubcrib}>
                 <input type="text" placeholder="Tu e-mail" />
