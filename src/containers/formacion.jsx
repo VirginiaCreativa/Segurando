@@ -31,6 +31,9 @@ class Formacion extends Component {
 
         <div className="container">
           <div className="row">
+            <div className="col-sm-12 d-sm-block d-md-none d-lg-none">
+              Sidebar Mobil
+            </div>
             <div className="col-md-9 col-sm-12">
               <PostsContents />
             </div>

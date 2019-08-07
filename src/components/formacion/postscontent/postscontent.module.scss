@@ -8,5 +8,52 @@
 }
 
 .PostsContenItem {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  .BoxImage {
+    height: 240px;
+    overflow: hidden;
+    border-radius: 8px;
+    @media screen and (max-width: 576px) {
+      height: 160px;
+    } 
+  }
+  .BoxContent {
+    .Top {
+      display: flex;
+      margin-bottom: 10px;
+      @media screen and (max-width: 576px) {
+        margin: 10px 0 10px;
+      } 
+      h6, p {
+        margin-bottom: 0;
+      }
+      h6 {
+        text-transform: uppercase;
+        color: $green;
+      }
+      span {
+        height: 6px;
+        width: 6px;
+        display: inline-block;
+        border-radius: 8px;
+        background-color: $write_gray_3;
+        position: relative;
+        top: 8px;
+        margin: 0 10px;
+      }
+      p {
+        position: relative;
+        top: -2px;
+        color: $gray_light;
+      }
+    }
+    .Content {
+      h4 {
+        margin-bottom: 10px;
+      }
+      p {
+        color: $gray_medium;
+      }
+    }
+  }
 }
