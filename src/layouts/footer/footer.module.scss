@@ -37,6 +37,23 @@
         }
       }
     }
+    :global {
+      .col-md-3 {
+        ul {
+          margin: 0;
+          padding: 0;
+          li {
+            margin: 0 15px;
+            &:first-child {
+              margin: 0;
+            }
+            a {
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    } 
     .Space {
       a {
         color: #fff;

@@ -24,6 +24,33 @@ const Footer = () => {
                 Laborum labore eu Lorem ullamco ipsum dolore et laboris velit in
                 nisi amet anim.
               </p>
+              <ul className="list-unstyled list-inline">
+                <li className="list-inline-item">
+                  <a href="https://facebook.com">
+                    <i className="bx bxl-facebook" />
+                  </a>
+                </li>
+                <li className="list-inline-item">
+                  <a href="https://twitter.com">
+                    <i className="bx bxl-twitter" />
+                  </a>
+                </li>
+                <li className="list-inline-item">
+                  <a href="https://youtube.com">
+                    <i className="bx bxl-youtube" />
+                  </a>
+                </li>
+                <li className="list-inline-item">
+                  <a href="https://instagram.com">
+                    <i className="bx bxl-instagram" />
+                  </a>
+                </li>
+                <li className="list-inline-item">
+                  <a href="https://linkedin.com">
+                    <i className="bx bxl-linkedin" />
+                  </a>
+                </li>
+              </ul>
             </div>
             <div className="col-md-2 col-sm-12 ">
               <h4>Categorías</h4>

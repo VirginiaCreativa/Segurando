@@ -16,7 +16,7 @@ const heading = ({ title, pagePath }) => (
             </li>
             <li>
               <p>
-                <span>/</span>
+                <span>\</span>
                 {pagePath}
               </p>
             </li>
