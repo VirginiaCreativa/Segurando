@@ -29,10 +29,10 @@ class Formacion extends Component {
 
         <div className="container">
           <div className="row">
-            <div className="col-10">
+            <div className="col-md-10 col-sm-12">
               <PostsContents />
             </div>
-            <div className="col-2">
+            <div className="col-md-2 d-none d-sm-block">
               <Sidebar />
             </div>
           </div>
