@@ -14,11 +14,14 @@ header {
   .navbar-toggler-icon {
     height: 20px;
   }
-  .navbar-collapse {
-    position: absolute;
-    top: 40px;
-    width: 100%;
-    z-index: 109 !important;
+  @media screen and (max-width: 576px) {
+  
+    .navbar-collapse {
+      position: absolute;
+      top: 40px;
+      width: 100%;
+      z-index: 109 !important;
+    }
   }
 
   .navbar-nav {
