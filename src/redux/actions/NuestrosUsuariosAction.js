@@ -30,12 +30,12 @@ function fakeGetNuestrosUsuarios() {
               company: 'Suramericana',
               city: 'Bogóta',
               job: 'Jefa Seguro',
-              image: 'usuario_1.jpg',
+              image: 'https://randomuser.me/api/portraits/women/85.jpg',
               formaciones: [
-                'Curso Salud 1',
-                'Curso Salud 2',
+                'Conferencia Salud 1',
+                'Diplomado Salud 2',
                 'Curso Salud 3',
-                'Curso Salud 4',
+                'Seminario Salud 4',
               ],
             },
             {
@@ -44,7 +44,7 @@ function fakeGetNuestrosUsuarios() {
               company: 'Epm',
               city: 'Medellín',
               job: 'Asesor de Seguros Corporativo',
-              image: 'usuario_2.jpg',
+              image: 'https://randomuser.me/api/portraits/men/61.jpg',
               formaciones: [
                 'Curso Financias 1',
                 'Seminario Financias 2',
@@ -57,8 +57,8 @@ function fakeGetNuestrosUsuarios() {
               name: 'Victora Plains',
               company: 'Isa',
               city: 'Medellín',
-              job: 'Vicepresidente Seguros Corporativo',
-              image: 'usuario_3.jpg',
+              job: 'Vicepresidenta Seguros Corporativo',
+              image: 'https://randomuser.me/api/portraits/women/0.jpg',
               formaciones: [
                 'Diplomado Financias 1',
                 'Curso Financias 2',
@@ -72,7 +72,7 @@ function fakeGetNuestrosUsuarios() {
               company: 'Toyota',
               city: 'Bogóta',
               job: 'Vicepresidenta Seguros Corporativo',
-              image: 'usuario_4.jpg',
+              image: 'https://randomuser.me/api/portraits/women/36.jpg',
               formaciones: [
                 'Curso ARL 1',
                 'Curso ARL 2',
@@ -86,7 +86,7 @@ function fakeGetNuestrosUsuarios() {
               company: 'Mazda',
               city: 'Bogóta',
               job: 'Vicepresidente Seguros',
-              image: 'usuario_5.jpg',
+              image: 'https://randomuser.me/api/portraits/men/13.jpg',
               formaciones: [
                 'Curso Movilidad 1',
                 'Diplomado Movilidad 2',
@@ -96,11 +96,11 @@ function fakeGetNuestrosUsuarios() {
             },
             {
               id: 6,
-              name: 'KGlenna Reichert',
+              name: 'Glenna Reichert',
               company: 'Construción S.A.',
               city: 'Cali',
               job: 'Vicepresidenta Seguros',
-              image: 'usuario_6.jpg',
+              image: 'https://randomuser.me/api/portraits/women/61.jpg',
               formaciones: [
                 'Curso Vivienda 1',
                 'Diplomado Vivienda 2',

@@ -14,7 +14,11 @@ const NuestrosUsuariosItem = ({
 }) => (
   <div className={classes.NuestrosUsuariosItem}>
     <div className={classes.BoxImage}>
-      <img src="" alt={`${company}, ${job}, ${name}`} className="img-fluid" />
+      <img
+        src={image}
+        alt={`${company}, ${job}, ${name}`}
+        className="img-fluid"
+      />
     </div>
     <div className={classes.BoxContent}>
       <h1>{name}</h1>

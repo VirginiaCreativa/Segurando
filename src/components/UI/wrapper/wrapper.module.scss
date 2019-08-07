@@ -7,10 +7,10 @@
     color: $principal;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     margin-bottom: 40px;
     font-family: 'Noto Sans JP';
-    font-weight: 600;
+    font-weight: 500;
     @media screen and (max-width: 576px) {
       @include responsive-font-size(30px);
       letter-spacing: 1px;
