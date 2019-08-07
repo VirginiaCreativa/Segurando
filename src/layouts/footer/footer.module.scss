@@ -2,7 +2,22 @@
 
 .Footer {
   background-color: $principal;
-  height: 400px;
+  height: 300px;
   clear: both;
   position: relative;
+  color: #fff;
+  .Top {
+    min-height: 260px;
+  }
+  .Bottom {
+    padding: 10px 0;
+    hr {
+      margin: 0;
+      padding: 0;
+    }
+    p {
+      margin-bottom: 0;
+      color: #fff;
+    }
+  }
 }
