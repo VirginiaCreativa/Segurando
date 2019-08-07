@@ -1,0 +1,32 @@
+@import '../../styles/variables';
+
+$gap: 10px;
+
+.Heading {
+  background-color: #f0f4f7;
+  padding: 40px 0;
+  margin-bottom: 70px;
+  h1 {
+    text-transform: uppercase;
+    font-size: 2rem;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    display: flex !important;
+    justify-content: flex-end;
+    li {
+      margin: $gap/2;
+      a, p {
+        color: $gray_light;
+        text-transform: uppercase;
+      }
+      p {
+        margin-bottom: 0;
+        span {
+          margin: 0 10px 0 2px;
+        }
+      }
+    }
+  }
+}

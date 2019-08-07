@@ -1,19 +1,27 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators, compose } from 'redux';
-import Banner from '../components/home/banner/banner';
+
+import Heading from '../layouts/heading/heading';
 
 import { getSelectLogo } from '../redux/actions/GlobalAction';
 
 class Formacion extends Component {
+  state = {
+    pathPage: '',
+  };
+
   componentDidMount() {
     this.props.getSelectLogo(1);
+    this.setState({ pathPage: this.props.match.path });
   }
 
   render() {
+    const { pathPage } = this.state;
+    const pathName = pathPage.replace('/', '');
     return (
       <>
-        <h2>Formacion</h2>
+        <Heading title="Formación" pagePath={pathName} />
       </>
     );
   }
