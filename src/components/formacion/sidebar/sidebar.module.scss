@@ -1,2 +1,42 @@
 @import '../../../styles/variables';
 @import '../../../styles/fontResponsive';
+
+
+%BoxSibera {
+  padding: 0 30px;
+  border-left: 1px solid $write_gray_1;
+  margin-bottom: 40px;
+  h2 {
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      width: 4px;
+      height: 40px;
+      background-color: $green;
+      position: absolute;
+      left: -31px;
+      top: 0;
+    }
+  }
+  ul {
+    padding: 0;
+    margin: 0;;
+    li {
+      padding: 20px 0;
+      border-bottom: 1px solid $write_gray_1;
+      &:last-child {
+        border-bottom: none;
+      }
+      a {
+        color: $black;
+      }
+    }
+  }
+} 
+.SidebarFormacionItem {
+  @extend %BoxSibera
+}
+.SidebarCategoriaItem {
+  @extend %BoxSibera
+}

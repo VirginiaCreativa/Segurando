@@ -10,9 +10,10 @@ const SidebarCategoriaItem = ({ formaciones }) => {
 
   return (
     <div className={classes.SidebarCategoriaItem}>
-      <ul>
+      <h2>Categorías</h2>
+      <ul className="list-unstyled">
         {categorias.map(item => (
-          <li key={item.id}>
+          <li key={item}>
             <Link to="/formacion">{item}</Link>
           </li>
         ))}
