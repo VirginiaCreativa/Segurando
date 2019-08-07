@@ -1,4 +1,5 @@
 @import '../../styles/variables';
+@import '../../styles/fontResponsive';
 
 $gap: 10px;
 
@@ -9,6 +10,12 @@ $gap: 10px;
   h1 {
     text-transform: uppercase;
     font-size: 2rem;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    @media (max-width: 576px) {
+      @include responsive-font-size(24px);
+    }
   }
   ul {
     padding: 0;
@@ -20,6 +27,9 @@ $gap: 10px;
       a, p {
         color: $gray_light;
         text-transform: uppercase;
+        @media (max-width: 576px) {
+          @include responsive-font-size(14px);
+        }
       }
       p {
         margin-bottom: 0;
