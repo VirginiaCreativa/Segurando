@@ -4,20 +4,15 @@
 $gap: 10px;
 
 .Premios {
-  position: relative;
-  top: -140px;
-  @media screen and (max-width: 576px) {
-    top: -430px;
-  }
   button {
-    padding: 10px 100px;
-    margin: 0 auto;
     display: flex;
     justify-content: center;
+    margin: 0 auto;
+    padding: 10px 100px;
   }
   p {
-    text-align: center;
     line-height: 2;
+    text-align: center;
     color: $gray_medium;
   }
   :global {

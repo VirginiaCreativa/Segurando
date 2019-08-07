@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './banner.module.scss';
+import Reactid from '../reactid/reactid';
 
 const banner = () => (
   <div className={classes.Banner}>
@@ -24,6 +25,7 @@ const banner = () => (
         </div>
       </div>
     </div>
+    <Reactid />
   </div>
 );
 

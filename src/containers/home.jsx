@@ -18,7 +18,7 @@ class Home extends Component {
     return (
       <>
         <Banner />
-        <Reactid />
+        {/* <Reactid /> */}
         <Formacion />
         <NuestrosUsuarios />
         <Premios />

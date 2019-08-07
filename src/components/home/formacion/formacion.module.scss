@@ -4,11 +4,6 @@
 $gap: 10px;
 
 .Formacion {
-  position: relative;
-  top: -140px;
-  @media screen and (max-width: 576px) {
-    top: -430px;
-  }
   button {
     padding: 10px 40px;
     margin: 0 auto;

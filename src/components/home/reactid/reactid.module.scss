@@ -3,9 +3,10 @@
 
 .Reactid {
   position: relative;
-  top: -162px;
+  top: -82px;
+  z-index: 3;
   @media screen and (max-width: 576px) {
-    top: -390px;
+    top: -150px;
   }
   .Box_sm {
     display: grid;
@@ -54,12 +55,16 @@
       color: $gray_medium;
     }
   }
-  .Scrolling_md {
+  .BoxSlide {
     display: flex;
     justify-content: center;
-    align-content: center;
     align-items: center;
-    height: 100%;
+    align-content: center;
+  }
+  .Scrolling_md {
+    padding: 30px 20px;
+    overflow-x: auto;
+    width: 226px;
     .Box_md {
       display: grid;
       grid-template-columns: repeat(5, auto);
@@ -68,13 +73,9 @@
       min-width:50%;
       min-height: 200px;
       padding: 40px 62px;
-      overflow-x: auto;
-      scrollbar-width: none;
-      &::-webkit-scrollbar {
-        display: none !important;
-      }
-      @media screen and (max-width: 360px) {
-        padding: 40px 34px;
+      @media screen and (max-width: 576px) {
+        padding: 40px 2px;
+        grid-gap: 60px;
       }
     }
   }

@@ -37,19 +37,21 @@ class Reactid extends Component {
           </div>
           {/* MOBIL */}
           <div className="d-sm-block d-md-block d-lg-none">
-            <div className={classes.Scrolling_md}>
+            <div className={classes.BoxSlide}>
               <Arrows select="l" />
-              {loading ? (
-                <div className="d-flex justify-content-center">
-                  <Spinner />
-                </div>
-              ) : (
-                <div className={classes.Box_md}>
-                  {reactid.map(item => (
-                    <ItemReactid key={item.id} {...item} />
-                  ))}
-                </div>
-              )}
+              <div className={classes.Scrolling_md}>
+                {loading ? (
+                  <div className="d-flex justify-content-center">
+                    <Spinner />
+                  </div>
+                ) : (
+                  <div className={classes.Box_md}>
+                    {reactid.map(item => (
+                      <ItemReactid key={item.id} {...item} />
+                    ))}
+                  </div>
+                )}
+              </div>
               <Arrows select="r" />
             </div>
           </div>

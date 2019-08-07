@@ -4,11 +4,6 @@
 $gap: 20px;
 
 .NuestrosUsuarios {
-  position: relative;
-  top: -140px;
-  @media screen and (max-width: 576px) {
-    top: -430px;
-  }
   .Subtitle {
     p {
       text-align: center;
@@ -28,10 +23,10 @@ $gap: 20px;
     scrollbar-width: none;
     @media screen and (max-width: 576px) {
       margin: 0  10px;
-      padding: 30px 20;
+      padding: 30px 20px;
     }
     @media screen and (max-width: 360px) {
-      padding: 30px 40px;
+      padding: 30px 16px;
     }
     &::-webkit-scrollbar {
       display: none !important;
@@ -42,26 +37,26 @@ $gap: 20px;
       grid-gap: 50px;
       justify-content: space-between;
       @media screen and (max-width: 576px) {
-        grid-gap: 100px;
         grid-template-columns: repeat(6, 240px);
+        grid-gap: 100px;
       }
       @media screen and (max-width: 360px) {
         grid-template-columns: repeat(6, 200px);
       }
     }
     .NuestrosUsuariosItem {
-      @extend %boxShadowContent;
       padding: 30px 20px;
+      @extend %boxShadowContent;
       .BoxImage {
         display: grid;
         justify-items: center;
         margin: 0 auto;
+        margin-bottom: 16px;
         width: 120px;
         height: 120px;
+        border: 4px solid $write_gray_1;
         border-radius: 100%;
         overflow: hidden;
-        margin-bottom: 16px;
-        border: 4px solid $write_gray_1;
       }
       .BoxContent {
         justify-items: center;
