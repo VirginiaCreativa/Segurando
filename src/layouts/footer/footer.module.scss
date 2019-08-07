@@ -1,23 +1,51 @@
 @import '../../styles/variables';
 
 .Footer {
-  background-color: $principal;
-  height: 300px;
-  clear: both;
-  position: relative;
   color: #fff;
+  background-color: #011832;
+  position: relative;
   .Top {
-    min-height: 260px;
+    padding: 40px 0;
+    p {
+      color: #fff;
+      margin-top: 40px;
+      margin-bottom: 0;
+      font-weight: 300;
+    }
+    .Logo {
+      height: 20%;
+    }
+    h4 {
+      color: #fff;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+    }
+    ul {
+      margin-left: 16px;
+      li {
+        padding: 6px 0;
+        a {
+          color: #fff;
+          font-weight: 300;
+          
+        }
+      }
+    }
+  }
+  hr {
+    background-color: rgba($color: #fff, $alpha: 0.2);
+    margin: 0;
+    padding: 0;
   }
   .Bottom {
-    padding: 10px 0;
-    hr {
-      margin: 0;
-      padding: 0;
-    }
+    display: grid;
+    align-items: center;
+    height: 40px;
     p {
+      font-size: 0.845rem;
+      text-align: center;
+      color: $gray_light !important;
       margin-bottom: 0;
-      color: #fff;
     }
   }
 }
