@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators, compose } from 'redux';
+import classes from './formacion.module.scss';
 
 import Heading from '../layouts/heading/heading';
+import PostsContents from '../components/formacion/postscontent/postscontent';
+import Sidebar from '../components/formacion/sidebar/sidebar';
 
 import { getSelectLogo } from '../redux/actions/GlobalAction';
 
@@ -19,10 +22,22 @@ class Formacion extends Component {
   render() {
     const { pathPage } = this.state;
     const pathName = pathPage.replace('/', '');
+
     return (
-      <>
+      <div className={classes.Formacion}>
         <Heading title="Formación" pagePath={pathName} />
-      </>
+
+        <div className="container">
+          <div className="row">
+            <div className="col-10">
+              <PostsContents />
+            </div>
+            <div className="col-2">
+              <Sidebar />
+            </div>
+          </div>
+        </div>
+      </div>
     );
   }
 }
