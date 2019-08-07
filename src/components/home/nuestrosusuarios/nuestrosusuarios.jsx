@@ -4,6 +4,7 @@ import { bindActionCreators, compose } from 'redux';
 import classes from './nuestrosusuarios.module.scss';
 
 import Wrapper from '../../UI/wrapper/wrapper';
+import Arrows from '../../UI/arrows/arrows';
 
 import { fetchFormacion } from '../../../redux/actions/FormacionAction';
 
@@ -16,14 +17,17 @@ class NuestrosUsuarios extends Component {
     return (
       <div className={classes.NuestrosUsuarios}>
         <Wrapper title="Nuestros Usuarios" bgColor="1">
-          <p>
-            Anim Lorem quis commodo fugiat anim ullamco eiusmod cupidatat
-            excepteur sunt. Veniam veniam sunt ut elit anim aute sunt magna duis
-            laborum. Aliqua ex non ad dolore ad. Nulla dolore fugiat magna
-            voluptate. Dolor amet voluptate deserunt voluptate enim id esse
-            cillum eu ullamco. Labore anim deserunt pariatur eu officia ad
-            officia id.
-          </p>
+          <div className={classes.Subtitle}>
+            <p>
+              Anim Lorem quis commodo fugiat anim ullamco eiusmod cupidatat
+              excepteur sunt. Veniam veniam sunt ut elit anim aute sunt magna
+              duis laborum.
+            </p>
+          </div>
+          <div className={classes.ItemsScrolling}>
+            <Arrows select="l" />
+            <Arrows select="r" />
+          </div>
         </Wrapper>
       </div>
     );

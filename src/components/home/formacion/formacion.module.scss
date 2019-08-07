@@ -9,6 +9,12 @@ $gap: 10px;
   @media screen and (max-width: 576px) {
     top: -430px;
   }
+  button {
+    padding: 10px 40px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
   .BoxFilters {
     display: flex;
     flex-wrap: wrap;

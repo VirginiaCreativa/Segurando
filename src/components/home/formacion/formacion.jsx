@@ -1,6 +1,7 @@
 import React, { Component, lazy } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators, compose } from 'redux';
+import { history } from '../../../redux/store/store';
 import classes from './formacion.module.scss';
 
 import { fetchFormacion } from '../../../redux/actions/FormacionAction';
@@ -189,6 +190,12 @@ class Formacion extends Component {
               </div>
             )}
           </>
+          <button
+            type="button"
+            className="btn btn-primary"
+            onClick={() => history.push('/formacion')}>
+            Más formaciones
+          </button>
         </Wrapper>
       </div>
     );
