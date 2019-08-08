@@ -5,10 +5,10 @@ $gap: 10px;
 
 .Formacion {
   button {
-    padding: 10px 40px;
-    margin: 0 auto;
     display: flex;
     justify-content: center;
+    margin: 0 auto;
+    padding: 10px 40px;
   }
   .BoxFilters {
     display: flex;
@@ -49,22 +49,25 @@ $gap: 10px;
         height: 200px;
         border-radius: 8px;
         overflow: hidden;
-        @media screen and (max-width: 576px) {
+        @media screen and (max-width: 800px) {
           height: 100px;
-        } 
+        }
       } 
       .BoxContent {
-        transition: all ease 0.2s;
-        border-bottom: 2px solid #fff;
         justify-content: center;
         background-color: #fff;
         position: relative;
         top: -20px;
         padding: 20px;
         width: 90%;
+        transition: all ease 0.2s;
+        border-bottom: 2px solid #fff;
         z-index: 2;
         @media screen and (max-width: 576px) {
           padding: 10px;
+        }
+        h6, h5 {
+          margin-bottom: 10px;
         }
         h6, h5, p {
           font-family: 'Noto Sans JP';
@@ -73,20 +76,20 @@ $gap: 10px;
           color: $green !important;
           text-transform: uppercase;
           font-weight: 400;
-          @media screen and (max-width: 576px) {
+          @media screen and (max-width: 800px) {
             @include responsive-font-size(12px);
           } 
         }
         h5 {
-          @media screen and (max-width: 576px) {
+          @media screen and (max-width: 800px) {
             @include responsive-font-size(16px);
           } 
         }
         p {
-          border-top: 1px solid $write_gray_1;
-          padding-top: 8px;
           font-size: 0.825rem;
           color: $gray_light !important;
+          padding-top: 8px;
+          border-top: 1px solid $write_gray_1;
           @media screen and (max-width: 576px) {
             @include responsive-font-size(0.725rem);
           } 

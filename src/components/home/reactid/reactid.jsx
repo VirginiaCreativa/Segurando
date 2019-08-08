@@ -36,7 +36,7 @@ class Reactid extends Component {
             )}
           </div>
           {/* MOBIL */}
-          <div className="d-sm-block d-md-none d-lg-none">
+          <div className="d-sm-block d-md-block d-lg-none">
             <div className={classes.BoxSlide}>
               <Arrows select="l" />
               <div className={classes.Scrolling}>

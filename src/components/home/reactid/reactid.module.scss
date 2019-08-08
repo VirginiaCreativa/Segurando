@@ -5,8 +5,11 @@
   position: relative;
   top: -82px;
   z-index: 999;
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 800px) {
     top: -120px;
+  }
+  @media (min-width: 568px) and (max-width: 800px) {
+    top: -100px;
   }
 
   .BoxSlide {
@@ -25,6 +28,10 @@
     &::-webkit-scrollbar {
       display: none !important;
     }
+    @media (min-width: 568px) and (max-width: 800px) {
+      width: 600px;
+      padding: 0;
+    }
     .Box_sm {
       display: grid;
       grid-template-columns: repeat(5, auto);
@@ -35,7 +42,11 @@
       padding: 40px 62px;
       @media screen and (max-width: 576px) {
         padding: 40px 2px;
-        grid-gap: 60px;
+      }
+      @media (min-width: 568px) and (max-width: 800px) {
+        grid-gap: 40px;
+        padding: 40px 22px;
+
       }
     }
   }
@@ -60,6 +71,10 @@
     width: 180px;
     height: 160px;
     border-radius: 4px;
+    @media (min-width: 568px) and (max-width: 800px) {
+      width: 160px;
+      height: 140px;
+    }
     .LineGreen {
       display: block;
       align-items: center;
@@ -78,6 +93,9 @@
     h1 {
       font-size: 60px;
       font-weight: 700;
+      @media (min-width: 568px) and (max-width: 800px) {
+        @include responsive-font-size(66px);
+      }
       span {
         margin-right: 16px;
       }
