@@ -5,7 +5,7 @@
   %rombo {
     width: 40px;
     height: 40px;
-    cursor: pointer;
+    cursor: pointer !important;
     background-image: url('../../../assets/icons/arrow.svg');
     background-repeat: no-repeat;
   }

@@ -4,11 +4,42 @@
 .Reactid {
   position: relative;
   top: -82px;
-  z-index: 3;
+  z-index: 999;
   @media screen and (max-width: 576px) {
-    top: -150px;
+    top: -120px;
   }
-  .Box_sm {
+
+  .BoxSlide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    
+  }
+  .Scrolling {
+    padding: 0 20px;
+    overflow-x: auto;
+    width: 226px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none !important;
+    }
+    .Box_sm {
+      display: grid;
+      grid-template-columns: repeat(5, auto);
+      grid-gap: 90px;
+      justify-content: start;
+      min-width:50%;
+      min-height: 200px;
+      padding: 40px 62px;
+      @media screen and (max-width: 576px) {
+        padding: 40px 2px;
+        grid-gap: 60px;
+      }
+    }
+  }
+  .Box_md {
     display: grid;
     grid-template-columns: repeat(5, auto);
     grid-gap: 20px;
@@ -55,28 +86,5 @@
       color: $gray_medium;
     }
   }
-  .BoxSlide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-  }
-  .Scrolling_md {
-    padding: 30px 20px;
-    overflow-x: auto;
-    width: 226px;
-    .Box_md {
-      display: grid;
-      grid-template-columns: repeat(5, auto);
-      grid-gap: 90px;
-      justify-content: start;
-      min-width:50%;
-      min-height: 200px;
-      padding: 40px 62px;
-      @media screen and (max-width: 576px) {
-        padding: 40px 2px;
-        grid-gap: 60px;
-      }
-    }
-  }
+  
 }
