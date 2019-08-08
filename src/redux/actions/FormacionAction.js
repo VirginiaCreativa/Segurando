@@ -58,7 +58,7 @@ function fakeGetFormacions() {
             {
               id: 3,
               formacion: 'diplomado',
-              categoria: 'arl',
+              categoria: 'ARL',
               title: 'Administración de Propiedad Horizontal con Énfasis',
               image: 'formacion_1.jpg',
               description:
