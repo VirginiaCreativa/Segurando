@@ -5,12 +5,14 @@ import classes from './sidebar.module.scss';
 
 import FormacionesItems from './sidebarFormacionItem';
 import CategoriasItems from './sidebarCategoriaItem';
+import Buscador from './buscador';
 
 class Sidebar extends Component {
   render() {
     const { error, loading, formaciones } = this.props;
     return (
       <div className={classes.Sidebar}>
+        <Buscador />
         <FormacionesItems />
         <CategoriasItems />
       </div>
